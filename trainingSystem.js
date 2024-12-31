@@ -31,6 +31,11 @@ class AkshewTraining {
             if (fs.existsSync(this.dataFile)) {
                 const rawData = fs.readFileSync(this.dataFile, 'utf8');
                 this.trainingData = JSON.parse(rawData);
+                // Ensure it's always an array
+                if (!Array.isArray(this.trainingData)) {
+                    console.log(`Training data is not an array, initializing with an empty dataset.`);
+                    this.trainingData = [];
+                }
             } else {
                 console.log(`Data file ${this.dataFile} not found, initializing with an empty dataset.`);
                 this.trainingData = [];
@@ -84,6 +89,7 @@ class AkshewTraining {
     }
 
     async learnFromGemini(prompt, geminiResponse, context = {}) {
+        console.log('Training Data Before Push:', this.trainingData); // Log for debugging
         const trainingEntry = {
             prompt: {
                 text: prompt,
@@ -105,6 +111,12 @@ class AkshewTraining {
                 context: context
             }
         };
+
+        // Ensure trainingData is an array before pushing
+        if (!Array.isArray(this.trainingData)) {
+            console.error('Training data is not an array!');
+            this.trainingData = [];
+        }
 
         this.trainingData.push(trainingEntry);
         this.saveTrainingData();
