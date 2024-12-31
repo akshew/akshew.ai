@@ -3,14 +3,6 @@
 
 **Akshew.AI** is a customizable and adaptive AI system that operates in two modes: **Local AI (Akshew)**, which uses locally stored training data, and **Gemini AI**, which fetches live data for real-time responses. The project is designed to provide users with intelligent, context-aware, and personalized interactions, with the flexibility to toggle between the two modes based on user needs.
 
-### Key Features:
-- **Mode Toggle**: Switch seamlessly between Akshew (local AI) for offline, pre-trained responses and Gemini (live data) for up-to-date, dynamic answers.
-- **Interactive Web UI**: A sleek frontend with a search bar, response display, and real-time loading animations for an engaging user experience.
-- **Contextual Memory**: Akshew retains both short-term and long-term context, improving response relevance and creating more personalized interactions.
-- **Personality Enhancements**: Akshew can adjust its conversational style and emotional tone, making interactions feel more natural and human-like.
-- **Ethical Safeguards**: Built-in rules and filters ensure responsible AI behavior by blocking harmful or illegal content.
-- **Dynamic Learning**: As users interact with Akshew and Gemini, the system continuously refines its understanding, improving its responses over time.
-
 ### How It Works:
 1. **Frontend (HTML/CSS/JS)**: The web interface allows users to query the AI and toggle between modes. It displays responses from either Akshew's local knowledge or Gemini's live search results.
 2. **Backend (Node.js)**: The system stores training data in `training_data.json` and updates it with new entries based on user interactions. Akshew uses similarity scoring and topic classification to provide relevant responses.
@@ -26,7 +18,7 @@
 ### Installation:
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/akshew-ai.git
+   git clone https://github.com/akshew/akshew-ai.git
    ```
 2. Install dependencies:  
    ```bash
