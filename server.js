@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.static('frontend'));
 
 // Initialize Gemini
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "AIzaSyCsoKLQN0_7VnhiRLrXhz-3n0sXfW8QhC8";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "api";
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
