@@ -1,4 +1,3 @@
-// aiEnhancement.js
 class AkshewEnhancement {
     constructor() {
         this.personality = {
