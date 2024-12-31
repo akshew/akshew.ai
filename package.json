@@ -1,0 +1,13 @@
+{
+  "name": "akshew-ai",
+  "version": "1.0.0",
+  "dependencies": {
+    "@google/generative-ai": "^0.1.0",
+    "cheerio": "^1.0.0-rc.12",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "marked": "^11.1.1",
+    "node-fetch": "^2.6.7"
+  }
+}
